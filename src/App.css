@@ -3,6 +3,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* CSS Variables */
+/*  Q: Why not use SASS for the variables feature then?
+    A: After some research, there are actually disadvantages of using
+    the SASS variables over plain CSS Variables. SASS needs to be compiled
+    before it can be converted to CSS, which means the variables can't be
+    modified at runtime. Not relevant for this project, but I think its
+    important to note that SASS isn't necessarily the "best" approach. */
 :root {
   --primaryColor: #af9a7d;
   --mainWhite: #fff;

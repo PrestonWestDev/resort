@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import logo from '../images/logo.svg';
+
+// @react-icons is great because we can get access to all icons through generic paths:
 import {FaAlignRight} from 'react-icons/fa';
+// import {MdHome} from 'react-icons/md';
+// import {BsHouse} from 'react-icons/bs'
+// import {FaWarehouse} from 'react-icons/fa'
+
 import {Link} from 'react-router-dom';
 
 export default class Navbar extends Component {

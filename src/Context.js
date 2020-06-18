@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import Client from './Contentful';
 
 
+
 const RoomContext = React.createContext();
 // <RoomContext.Provider value={'hello'}
 class RoomProvider extends Component {
@@ -26,7 +27,8 @@ class RoomProvider extends Component {
     getData = async () => {
         try {
             let response = await Client.getEntries({
-                content_type: "beachResortRoom"
+                content_type: "beachResortRoom",
+                order: "sys.createdAt"
             });
             console.log(response);
             let rooms = this.formatData(response.items);
@@ -49,6 +51,7 @@ class RoomProvider extends Component {
     }
 
     componentDidMount() {
+      console.log(process.env.NODE_ENV);
         this.getData();
     }
 

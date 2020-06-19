@@ -7,7 +7,8 @@ import {FaAlignRight} from 'react-icons/fa';
 // import {BsHouse} from 'react-icons/bs'
 // import {FaWarehouse} from 'react-icons/fa'
 
-import {Link} from 'react-router-dom';
+import { A } from 'hookrouter';
+
 
 export default class Navbar extends Component {
     state={
@@ -21,9 +22,9 @@ export default class Navbar extends Component {
         <nav className="navbar">
             <div className="nav-center">
                 <div className="nav-header">
-                    <Link to="/">
-                        <img src={logo} alt="Beach Resort"></img>
-                    </Link>
+                 <A href="/">
+                    <img src={logo} alt="Beach Resort"></img>
+                 </A>
                     <button type="button" className="nav-btn" onClick={this.handleToggle}>
                         <FaAlignRight className="nav-icon"></FaAlignRight>
                     </button>
@@ -31,10 +32,10 @@ export default class Navbar extends Component {
                 {/* This uses CSS tricks show links in the navbar w/ overflow and added height values */}
                 <ul className={this.state.isOpen ? "nav-links show-nav" : "nav-links"}>
                     <li>
-                        <Link to="/">Home</Link>
+                        <A href="/">Home</A>
                     </li>
                     <li>
-                        <Link to="/rooms">Rooms</Link>
+                        <A href="/rooms">Rooms</A>
                     </li>
                 </ul>
             </div>

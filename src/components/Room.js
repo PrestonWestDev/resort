@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import defaultImg from "../images/room-1.jpeg";
 import PropTypes from "prop-types";
 import { memo } from "react";
+
+import { A } from 'hookrouter';
+
 const Room = memo(({ room }) => {
   const { name, slug, images, price } = room;
   // console.log(name);
@@ -14,9 +17,9 @@ const Room = memo(({ room }) => {
           <h6>${price}</h6>
           <p>per night</p>
         </div>
-        <Link to={`/rooms/${slug}`} className="btn-primary room-link">
-          features
-        </Link>
+        <A href={`/rooms/${slug}`} className="btn-primary room-link">Features</A>
+
+
       </div>
       <p className="room-info">{name}</p>
     </article>

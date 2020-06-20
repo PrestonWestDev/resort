@@ -6,7 +6,7 @@ import SingleRoom from './pages/SingleRoom';
 const routes = {
     "/": () => <Home />,
     "/rooms": () => <Rooms />,
-    "/rooms/:slug": ({slug}) => <SingleRoom />
+    "/rooms/:slug": ({slug}) => <SingleRoom slug={slug} />
   };
 
   export default routes;

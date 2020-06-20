@@ -1,11 +1,10 @@
-import React, { Component } from 'react'
-//import items from './data'
+import React, { Component, useState, useEffect } from 'react'
 import Client from './Contentful';
 
 
 
 const RoomContext = React.createContext();
-// <RoomContext.Provider value={'hello'}
+
 class RoomProvider extends Component {
 
     state={
@@ -54,6 +53,14 @@ class RoomProvider extends Component {
       console.log(process.env.NODE_ENV);
         this.getData();
     }
+
+    // useEffect(() => {
+    //   this.getData();
+    //   console.log(process.env.NODE_ENV);
+    //   console.log('mounted')
+    // });
+
+
 
     formatData(items) {
         let tempItems = items.map(item => {

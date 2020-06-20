@@ -9,22 +9,7 @@ import StyledHero from "../components/StyledHero";
 import { A } from 'hookrouter';
 
 
-export default class SingleRoom extends Component {
-
-  
-  constructor(props) {
-    super(props);
-    console.log(this.props);
-    this.state = {
-      slug: this.props.match.params.slug,
-      defaultBcg: defaultBcg
-    };
-  }
-  static contextType = RoomContext;
-
-  render() {
-    const { getRoom } = this.context;
-    const room = getRoom(this.state.slug);
+const SingleRoom = ({room}) => {
 
     if (!room) {
       return (
@@ -90,4 +75,5 @@ export default class SingleRoom extends Component {
       </>
     );
   }
-}
+
+export default SingleRoom;

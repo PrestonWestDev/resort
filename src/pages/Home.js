@@ -8,9 +8,6 @@ import Rooms from './Rooms';
 import Client from '../Contentful';
 import Loading from '../components/Loading';
 
-
-
-
 export default function Home() {
 
     const [isLoading, setIsLoading] = useState(true);

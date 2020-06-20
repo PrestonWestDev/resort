@@ -1,8 +1,6 @@
 import React, { Component, useState, useEffect } from 'react'
 import Client from './Contentful';
 
-
-
 const RoomContext = React.createContext();
 
 class RoomProvider extends Component {
@@ -59,8 +57,6 @@ class RoomProvider extends Component {
     //   console.log('mounted')
     // });
 
-
-
     formatData(items) {
         let tempItems = items.map(item => {
             let id = item.sys.id;
@@ -72,13 +68,11 @@ class RoomProvider extends Component {
         return tempItems;
     }
 
-
     getRoom = slug => {
         let tempRooms = [...this.state.rooms];
         const room = tempRooms.find(room => room.slug === slug);
         return room;
       };
-
 
       handleChange = event => {
         const target = event.target;
@@ -93,7 +87,6 @@ class RoomProvider extends Component {
           this.filterRooms
         );
       };
-
 
       filterRooms = () => {
         let {

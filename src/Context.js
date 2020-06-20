@@ -50,7 +50,6 @@ class RoomProvider extends Component {
     }
 
     componentDidMount() {
-      console.log(process.env.NODE_ENV);
         this.getData();
     }
 
